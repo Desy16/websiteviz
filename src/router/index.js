@@ -13,14 +13,47 @@ const routes = [
         }
     },
     {
-        path: '/nbcsport',
-        name: 'NbcSport',
+        path: '/nbcsport/degree',
+        name: 'Degree',
         // route level code-splitting
         // this generates a separate chunk (nbcsport.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "nbcsport" */ '../views/pages/NbcSport.vue'),
+        component: () => import(/* webpackChunkName: "degree" */ '../views/nbcsport/Degree.vue'),
         meta: {
-            title: 'NbcSport - ' + NAME_APP
+            title: 'NbcSport degree - ' + NAME_APP
+        }
+    },
+    {
+        path: '/nbcsport/pagerank',
+        name: 'PageRank',
+        // route level code-splitting
+        // this generates a separate chunk (nbcsport.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "pagerank" */ '../views/nbcsport/PageRank.vue'),
+        meta: {
+            title: 'NbcSport pagerank - ' + NAME_APP
+        }
+    },
+    {
+        path: '/nbcsport/closeness',
+        name: 'closeness',
+        // route level code-splitting
+        // this generates a separate chunk (nbcsport.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "closeness" */ '../views/nbcsport/Closeness.vue'),
+        meta: {
+            title: 'NbcSport closeness - ' + NAME_APP
+        }
+    },
+    {
+        path: '/nbcsport/betweenness',
+        name: 'betweenness',
+        // route level code-splitting
+        // this generates a separate chunk (nbcsport.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "betweenness" */ '../views/nbcsport/Betweenness.vue'),
+        meta: {
+            title: 'NbcSport betweenness - ' + NAME_APP
         }
     },
     {
@@ -29,7 +62,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (bbcsport.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "bbcsport" */ '../views/pages/BbcSport.vue'),
+        component: () => import(/* webpackChunkName: "bbcsport" */ '../views/bbcsport/BbcSport.vue'),
         meta: {
             title: 'BbcSport - ' + NAME_APP
         }
@@ -40,7 +73,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (skysport.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "skysport" */ '../views/pages/SkySport.vue'),
+        component: () => import(/* webpackChunkName: "skysport" */ '../views/skysports/SkySport.vue'),
         meta: {
             title: 'SkySport - ' + NAME_APP
         }
