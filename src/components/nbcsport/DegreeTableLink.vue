@@ -1,22 +1,26 @@
 <template>
   <div class="p-6 bg-gray-900 rounded-lg">
-    <div class="flex items-center justify-between pb-4">
-      <div :key="depth">
+    <div class="flex justify-between pb-4">
+      <div :key="depth" class="flex flex-col gap-y-6 pt-6 pr-6">
         <button
-          :style="index == 1 ? null : { 'background-color': ' #212832' }"
-          class="bt outline-none"
+          :style="index == 1 ? null : { 'background-color': '#212832' }"
+          class="relative flex space-x-2 items-center"
           @click="changeDepth(0)"
         >
-          profondeur 2
+          <ArrowNarrowDownIcon class="h-4 w-4 text-white" />
+          <span class="text-sm text-white">depth 2</span>
         </button>
+
         <button
-          :style="index == 0 ? null : { 'background-color': ' #212832' }"
-          class="bt outline-none"
+          :style="index == 0 ? null : { 'background-color': '#212832' }"
+          class="relative flex space-x-2 items-center"
           @click="changeDepth(1)"
         >
-          profondeur 3
+          <ArrowNarrowDownIcon class="h-4 w-4 text-white" />
+          <span class="text-sm text-white">depth 3</span>
         </button>
       </div>
+
       <table class="w-full">
         <thead>
           <tr class="text-sm font-semibold text-white">
@@ -29,14 +33,14 @@
           <tr
             v-for="(data, index) in degreeData[index][depth]"
             :key="index"
-            class="text-sm text-white"
+            class="text-sm text-gray-500"
           >
-            <td>
+            <td class="py-4">
               <a :href="Object.keys(data)[0]" target="_blank">
                 {{ Object.keys(data)[0] }}
               </a>
             </td>
-            <td>{{ data[Object.keys(data)[0]] }}</td>
+            <td class="py-4">{{ convertScore(data[Object.keys(data)[0]]) }}</td>
           </tr>
         </tbody>
       </table>
@@ -45,8 +49,13 @@
 </template>
 
 <script>
+import { ArrowNarrowDownIcon } from "@heroicons/vue/outline";
+
 export default {
   props: ["degreeData"],
+  components: {
+    ArrowNarrowDownIcon,
+  },
 
   data() {
     return {

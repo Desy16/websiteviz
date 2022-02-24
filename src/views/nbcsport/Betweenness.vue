@@ -1,20 +1,28 @@
 <template>
   <div class="px-6 pt-8">
-    <div class="betweenness flex items-center justify-center">
+    <main class="betweenness flex flex-col flex-1 gap-6 p-4">
       <!--Header-->
       <div class="text-center">
-        <h1>NBC page</h1>
-        <img class="h-10 w-10" src="../../assets/logos/nbcsports.png" alt="" />
-        <p class="mt-4 max-w-2xl ml-32">
-          C'est la filiale de la société de télévision NBC spécialisée dans la
-          retransmission d'émissions sportives aux États-Unis.
+        <a href="https://www.nbcsports.com/" target="_blank">
+          <img
+            class="ml-60 h-50 w-50"
+            src="../../assets/logos/nbcsports.png"
+            alt=""
+          />
+        </a>
+        <p class="mt-4 ml-60">
+          It is the subsidiary of the television company NBC specializing in
+          <br />
+          the retransmission of sports programs in the United States.
         </p>
       </div>
       <!--Content-->
       <hr class="border-gray-700" />
+    </main>
+    <div class="flex flex-col flex-1 gap-3 p-2">
       <BetweennessTableLink
         :betweennessData="betweennessItem"
-        class="text-sm text-gray-500"
+        class="text-sm text-gray-500 ml-60"
       />
     </div>
   </div>

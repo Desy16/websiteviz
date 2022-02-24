@@ -3,7 +3,7 @@
   <div class="welcome flex justify-center">
     <!--Header-->
     <!--Content-->
-    <div class="p-64 text-cyan-700">
+    <div class="ml-10 p-64 text-cyan-700">
       <h1 class="text-4xl font-extrabold uppercase">
         welcome to websiteviz 👋
       </h1>

@@ -54,10 +54,10 @@
         </router-link>
 
         <!--NBC Sport-->
-        <div class="relative">
+        <div x-data="dropdown" class="relative">
           <!-- Dropdown head -->
-          <router-link
-            to="/nbcsport"
+          <div
+            @click="toggle('nbcsport')"
             class="
               relative
               flex
@@ -82,7 +82,7 @@
             <button class="absolute right-8 p-1" @click="open = true">
               <ChevronDownIcon class="h-4 w-4 text-white" />
             </button>
-          </router-link>
+          </div>
 
           <!-- Dropdown content 
           <div class="text-gray-400 space-y-3">
@@ -94,7 +94,7 @@
             <h1 class="hover:text-gray-200 cursor-pointer">Betweenness</h1>
           </div>-->
 
-          <ul class="text-gray-400 space-y-3">
+          <ul x-show="open" class="text-gray-400 space-y-3">
             <li>
               <router-link
                 to="/nbcsport/degree"
@@ -105,7 +105,8 @@
                   py-2
                   text-xs
                   rounded
-                  hover:text-white
+                  text-white
+                  hover:text-gray-300
                 "
                 >Degree</router-link
               >
@@ -120,7 +121,8 @@
                   py-2
                   text-xs
                   rounded
-                  hover:text-white
+                  text-white
+                  hover:text-gray-300
                 "
                 >PageRank</router-link
               >
@@ -135,7 +137,8 @@
                   py-2
                   text-xs
                   rounded
-                  hover:text-white
+                  text-white
+                  hover:text-gray-300
                 "
                 >Closeness</router-link
               >
@@ -150,7 +153,8 @@
                   py-2
                   text-xs
                   rounded
-                  hover:text-white
+                  text-white
+                  hover:text-gray-300
                 "
                 >Betweenness</router-link
               >

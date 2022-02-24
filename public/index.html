@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="../src/type/index.js"></script>
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
 
 </head>
 
-<body x-data="{open:false}" class="h-screen mx-auto antialiased flex justify-between">
+<body x-data class="h-screen mx-auto antialiased flex justify-between">
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
